@@ -48,8 +48,10 @@ export default function Hero() {
           
           <div className="flex flex-col sm:flex-row gap-4 mt-3 md:mt-4">
             <Link 
-              href="#comprar" 
+              href="https://pay.hotmart.com/B98656274B?off=7cfnci5g" 
               className="btn-primary text-center font-bold text-sm md:text-base py-3 md:py-4 px-6 md:px-8 shadow-md hover:shadow-lg transition-all"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               QUERO ACABAR COM ESSA PREOCUPAÇÃO
             </Link>

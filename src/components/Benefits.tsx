@@ -125,7 +125,12 @@ export default function Benefits() {
                 ))}
               </div>
               <div className="mt-5 md:mt-6 text-center">
-                <a href="#comprar" className="inline-block bg-highlight text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-lg text-sm md:text-base hover:bg-highlight/90 transition-colors shadow-md hover:shadow-lg">
+                <a 
+                  href="https://pay.hotmart.com/B98656274B?off=7cfnci5g" 
+                  className="inline-block bg-highlight text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-lg text-sm md:text-base hover:bg-highlight/90 transition-colors shadow-md hover:shadow-lg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   QUERO PROTEGER MEU GATO AGORA
                 </a>
               </div>
