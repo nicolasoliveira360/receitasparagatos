@@ -72,13 +72,14 @@ export default function Testimonials() {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentRef = sectionRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -145,7 +146,7 @@ export default function Testimonials() {
                 </div>
                 
                 <blockquote className="mb-3 md:mb-4">
-                  <p className="text-sm md:text-base text-gray-700 italic">"{testimonials[activeIndex].text}"</p>
+                  <p className="text-sm md:text-base text-gray-700 italic">&ldquo;{testimonials[activeIndex].text}&rdquo;</p>
                 </blockquote>
                 
                 <div className="flex flex-col">
