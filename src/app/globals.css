@@ -1,15 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F9F6F2;
+  --foreground: #100b09;
+  --title: #473225;
+  --highlight: #B88917;
+  --highlight-hover: #9e7414;
+  --text-light: #5c4434;
+  --text-muted: #6b5a4c;
+  --card-bg: #ffffff;
+  --card-border: #f0e6d6;
+  --card-hover: #f9f3e9;
+  --dark-bg: #1D1A16;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-title: var(--title);
+  --color-highlight: var(--highlight);
+  --color-text-light: var(--text-light);
+  --color-text-muted: var(--text-muted);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-card-hover: var(--card-hover);
+  --font-sans: var(--font-poppins);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +37,312 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--title);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.highlight {
+  color: var(--highlight);
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--highlight);
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 4px 10px rgba(184, 137, 23, 0.2);
+  letter-spacing: 0.02em;
+}
+
+.btn-primary:hover {
+  background: var(--highlight-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(184, 137, 23, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--highlight);
+  font-weight: 600;
+  border: 2px solid var(--highlight);
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-secondary:hover {
+  background-color: var(--highlight);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  border: 1px solid var(--card-border);
+}
+
+.card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transform: translateY(-3px);
+  border-color: var(--highlight);
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--highlight);
+  border-radius: 2px;
+}
+
+/* Melhorias para textos em diferentes seções */
+.hero-text {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
+.testimonial-text {
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
+.faq-question {
+  font-weight: 600;
+  color: var(--title);
+}
+
+.faq-answer {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* Estilos para ícones e elementos visuais */
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: rgba(184, 137, 23, 0.1);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.icon-container:hover {
+  transform: scale(1.05);
+  background: rgba(184, 137, 23, 0.15);
+}
+
+/* Estilos para listas */
+ul.feature-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  list-style-type: none;
+}
+
+ul.feature-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--highlight);
+  border-radius: 50%;
+}
+
+.highlight-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(184, 137, 23, 0.1);
+}
+
+.highlight-badge {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background-color: var(--highlight);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #F9F6F2 0%, #F0EAE0 100%);
+}
+
+.dark-section {
+  background-color: var(--dark-bg);
+  color: white;
+}
+
+.dark-section h2, 
+.dark-section h3 {
+  color: white;
+}
+
+.dark-section p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-animation {
+  animation: float 5s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .icon-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.price-tag {
+  position: relative;
+  display: inline-block;
+}
+
+.price-tag:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: var(--highlight);
+  transform: rotate(-5deg);
+}
+
+/* Estilos para seções */
+section {
+  padding: 4rem 0;
+}
+
+/* Espaçamento mais clean */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Reduzir elementos visuais excessivos */
+.decorative-element {
+  opacity: 0.3;
+}
+
+/* Simplificar transições */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Cores mais suaves para fundos de seção */
+.bg-soft {
+  background-color: rgba(184, 137, 23, 0.03);
+}
+
+/* Espaçamento mais generoso */
+.section-spacing {
+  margin-bottom: 5rem;
+}
+
+/* Imagens com bordas arredondadas */
+.rounded-image {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Sombras mais sutis */
+.subtle-shadow {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+/* Estilo para paw prints (pegadas de gato) */
+.paw-print {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: var(--highlight);
+  opacity: 0.7;
+  margin: 0 0.5rem;
+}
+
+/* Estilo para citações de depoimentos mais clean */
+blockquote {
+  border-left: 3px solid var(--highlight);
+  padding-left: 1rem;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+/* Reduzir o uso de gradientes */
+.subtle-gradient {
+  background: linear-gradient(to right, rgba(184, 137, 23, 0.05), rgba(184, 137, 23, 0.01));
 }

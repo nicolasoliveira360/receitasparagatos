@@ -1,0 +1,242 @@
+---
+description: react-best-practices
+globs: 
+alwaysApply: false
+---
+# Manual de Ouro - React ⚛️
+
+## Índice
+1. [Fundamentos](mdc:#fundamentos)
+2. [Hooks](mdc:#hooks)
+3. [Performance](mdc:#performance)
+4. [Padrões de Projeto](mdc:#padrões-de-projeto)
+5. [Estado e Gerenciamento de Dados](mdc:#estado-e-gerenciamento-de-dados)
+6. [Testes](mdc:#testes)
+
+## Fundamentos
+
+### 1. Componentes Funcionais
+```jsx
+// ✅ Correto
+const Componente = ({ prop1, prop2 }) => {
+  return <div>{prop1} {prop2}</div>
+}
+
+// ❌ Evitar
+class Componente extends React.Component {
+  render() {
+    return <div>{this.props.prop1}</div>
+  }
+}
+```
+
+### 2. Props e PropTypes
+```jsx
+import PropTypes from 'prop-types'
+
+const Componente = ({ nome, idade }) => {
+  return <div>{nome} tem {idade} anos</div>
+}
+
+Componente.propTypes = {
+  nome: PropTypes.string.isRequired,
+  idade: PropTypes.number.isRequired
+}
+```
+
+## Hooks
+
+### 1. useState
+```jsx
+const [estado, setEstado] = useState(valorInicial)
+
+// ✅ Correto
+setEstado(prev => prev + 1)
+
+// ❌ Evitar
+setEstado(estado + 1)
+```
+
+### 2. useEffect
+```jsx
+// Limpeza de efeitos
+useEffect(() => {
+  const subscription = api.subscribe()
+  return () => subscription.unsubscribe()
+}, [dependencia])
+
+// Evitar loops infinitos
+useEffect(() => {
+  // Lógica aqui
+}, []) // Array vazio para executar apenas uma vez
+```
+
+### 3. useMemo e useCallback
+```jsx
+// useMemo para valores computados
+const valorMemoizado = useMemo(() => {
+  return computacaoCara(dados)
+}, [dados])
+
+// useCallback para funções
+const funcaoMemoizada = useCallback(() => {
+  // Lógica aqui
+}, [dependencias])
+```
+
+## Performance
+
+### 1. Memoização
+```jsx
+// Memoização de componentes
+const ComponenteMemoizado = React.memo(({ prop1, prop2 }) => {
+  return <div>{prop1} {prop2}</div>
+})
+
+// Evitar re-renders desnecessários
+const Componente = ({ dados }) => {
+  const dadosProcessados = useMemo(() => {
+    return processarDados(dados)
+  }, [dados])
+  
+  return <div>{dadosProcessados}</div>
+}
+```
+
+### 2. Virtualização
+```jsx
+import { VirtualizedList } from 'react-window'
+
+const ListaVirtualizada = ({ items }) => {
+  return (
+    <VirtualizedList
+      height={400}
+      itemCount={items.length}
+      itemSize={35}
+    >
+      {({ index, style }) => (
+        <div style={style}>{items[index]}</div>
+      )}
+    </VirtualizedList>
+  )
+}
+```
+
+## Padrões de Projeto
+
+### 1. Componentes Compostos
+```jsx
+const Select = ({ children }) => {
+  return <div className="select">{children}</div>
+}
+
+Select.Option = ({ value, children }) => {
+  return <div className="option">{children}</div>
+}
+
+// Uso
+<Select>
+  <Select.Option value="1">Opção 1</Select.Option>
+  <Select.Option value="2">Opção 2</Select.Option>
+</Select>
+```
+
+### 2. Render Props
+```jsx
+const DataFetcher = ({ render }) => {
+  const [data, setData] = useState(null)
+  
+  useEffect(() => {
+    fetchData().then(setData)
+  }, [])
+  
+  return render(data)
+}
+
+// Uso
+<DataFetcher
+  render={data => <div>{data}</div>}
+/>
+```
+
+## Estado e Gerenciamento de Dados
+
+### 1. Context API
+```jsx
+const ThemeContext = React.createContext()
+
+const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState('light')
+  
+  return (
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  )
+}
+
+// Uso
+const useTheme = () => useContext(ThemeContext)
+```
+
+### 2. Redux (quando necessário)
+```jsx
+// Slice
+const counterSlice = createSlice({
+  name: 'counter',
+  initialState: 0,
+  reducers: {
+    increment: state => state + 1,
+    decrement: state => state - 1
+  }
+})
+
+// Uso
+const dispatch = useDispatch()
+dispatch(increment())
+```
+
+## Testes
+
+### 1. Testes Unitários
+```jsx
+import { render, screen } from '@testing-library/react'
+
+test('renderiza componente corretamente', () => {
+  render(<Componente />)
+  expect(screen.getByText('Texto')).toBeInTheDocument()
+})
+```
+
+### 2. Testes de Integração
+```jsx
+test('integração com API', async () => {
+  render(<ComponenteComAPI />)
+  await waitFor(() => {
+    expect(screen.getByText('Dados carregados')).toBeInTheDocument()
+  })
+})
+```
+
+## Boas Práticas
+
+### 1. Organização de Código
+- Separe componentes em arquivos individuais
+- Use pastas para organizar por funcionalidade
+- Mantenha componentes pequenos e reutilizáveis
+
+### 2. Nomenclatura
+- Use PascalCase para componentes
+- Use camelCase para funções e variáveis
+- Use UPPER_CASE para constantes
+
+### 3. Acessibilidade
+- Use elementos semânticos
+- Implemente ARIA labels
+- Garanta contraste adequado
+- Teste com leitores de tela
+
+## Recursos Adicionais
+- [Documentação Oficial React](mdc:https:/reactjs.org/docs)
+- [React Patterns](mdc:https:/reactpatterns.com)
+- [React Testing Library](mdc:https:/testing-library.com/docs/react-testing-library/intro)

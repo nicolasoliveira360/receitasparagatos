@@ -1,0 +1,271 @@
+---
+description: tailwindcss-best-practices
+globs: 
+alwaysApply: false
+---
+# Manual de Ouro - Tailwind CSS 🎨
+
+## Índice
+1. [Configuração](#configuração)
+2. [Classes e Utilitários](#classes-e-utilitários)
+3. [Componentes](#componentes)
+4. [Responsividade](#responsividade)
+5. [Performance](#performance)
+6. [Dicas e Truques](#dicas-e-truques)
+
+## Configuração
+
+### 1. Configuração Básica
+```javascript
+// tailwind.config.js
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./pages/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'primary': '#FF0000',
+        'secondary': '#00FF00',
+      },
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+      },
+    },
+  },
+  plugins: [],
+}
+```
+
+### 2. Plugins Recomendados
+```javascript
+module.exports = {
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
+}
+```
+
+## Classes e Utilitários
+
+### 1. Organização de Classes
+```jsx
+// ✅ Correto
+<div className="
+  flex
+  items-center
+  justify-between
+  p-4
+  bg-white
+  rounded-lg
+  shadow-md
+  hover:shadow-lg
+  transition-shadow
+  duration-200
+">
+
+// ❌ Evitar
+<div className="flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+```
+
+### 2. Classes Condicionais
+```jsx
+const Button = ({ isActive, children }) => {
+  return (
+    <button
+      className={`
+        px-4 py-2 rounded
+        ${isActive 
+          ? 'bg-blue-500 text-white' 
+          : 'bg-gray-200 text-gray-700'
+        }
+      `}
+    >
+      {children}
+    </button>
+  )
+}
+```
+
+## Componentes
+
+### 1. Componentes Base
+```jsx
+// components/Button.jsx
+const Button = ({ variant = 'primary', size = 'md', children }) => {
+  const baseStyles = 'rounded font-medium transition-colors duration-200'
+  
+  const variants = {
+    primary: 'bg-blue-500 text-white hover:bg-blue-600',
+    secondary: 'bg-gray-200 text-gray-700 hover:bg-gray-300',
+    outline: 'border-2 border-blue-500 text-blue-500 hover:bg-blue-50'
+  }
+  
+  const sizes = {
+    sm: 'px-3 py-1.5 text-sm',
+    md: 'px-4 py-2',
+    lg: 'px-6 py-3 text-lg'
+  }
+  
+  return (
+    <button className={`
+      ${baseStyles}
+      ${variants[variant]}
+      ${sizes[size]}
+    `}>
+      {children}
+    </button>
+  )
+}
+```
+
+### 2. Cards e Containers
+```jsx
+const Card = ({ children }) => {
+  return (
+    <div className="
+      bg-white
+      rounded-lg
+      shadow-md
+      p-6
+      hover:shadow-lg
+      transition-shadow
+      duration-200
+    ">
+      {children}
+    </div>
+  )
+}
+```
+
+## Responsividade
+
+### 1. Breakpoints
+```jsx
+<div className="
+  w-full
+  md:w-1/2
+  lg:w-1/3
+  xl:w-1/4
+">
+  {/* Conteúdo */}
+</div>
+```
+
+### 2. Layout Responsivo
+```jsx
+<div className="
+  grid
+  grid-cols-1
+  sm:grid-cols-2
+  md:grid-cols-3
+  lg:grid-cols-4
+  gap-4
+">
+  {/* Grid items */}
+</div>
+```
+
+## Performance
+
+### 1. Purge CSS
+```javascript
+// tailwind.config.js
+module.exports = {
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    content: [
+      './src/**/*.{js,jsx,ts,tsx}',
+      './public/index.html'
+    ],
+  },
+}
+```
+
+### 2. JIT (Just-In-Time)
+```javascript
+// tailwind.config.js
+module.exports = {
+  mode: 'jit',
+  // ... resto da configuração
+}
+```
+
+## Dicas e Truques
+
+### 1. Extensões de Classes
+```css
+/* styles.css */
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6;
+  }
+}
+```
+
+### 2. Animações
+```css
+/* styles.css */
+@layer utilities {
+  .animate-fade-in {
+    @apply transition-opacity duration-300;
+  }
+  
+  .animate-slide-up {
+    @apply transition-transform duration-300 translate-y-0 hover:-translate-y-1;
+  }
+}
+```
+
+### 3. Temas
+```javascript
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          // ... outras variações
+          900: '#0c4a6e',
+        },
+      },
+    },
+  },
+}
+```
+
+## Boas Práticas
+
+### 1. Organização
+- Use componentes reutilizáveis
+- Mantenha classes consistentes
+- Use @apply para padrões repetitivos
+- Organize classes em ordem lógica
+
+### 2. Acessibilidade
+- Use cores com contraste adequado
+- Implemente estados de foco visíveis
+- Mantenha hierarquia visual clara
+- Use tamanhos de fonte apropriados
+
+### 3. Manutenção
+- Documente componentes complexos
+- Use variáveis CSS para valores repetidos
+- Mantenha um design system consistente
+- Faça revisões regulares de código
+
+## Recursos Adicionais
+- [Documentação Oficial Tailwind](https://tailwindcss.com/docs)
+- [Tailwind UI](https://tailwindui.com)
+- [Tailwind Components](https://tailwindcomponents.com)

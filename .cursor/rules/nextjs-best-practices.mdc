@@ -1,0 +1,148 @@
+---
+description: nextjs-best-practices
+globs: 
+alwaysApply: false
+---
+# Manual de Ouro - Next.js 🚀
+
+## Índice
+1. [Fundamentos](#fundamentos)
+2. [Estrutura de Projetos](#estrutura-de-projetos)
+3. [Performance](#performance)
+4. [Segurança](#segurança)
+5. [SEO](#seo)
+6. [Dicas e Truques](#dicas-e-truques)
+
+## Fundamentos
+
+### 1. App Router vs Pages Router
+- Use o App Router para novos projetos (Next.js 13+)
+- Benefícios do App Router:
+  - Server Components por padrão
+  - Melhor performance
+  - Layouts aninhados
+  - Loading e Error states nativos
+
+### 2. Server vs Client Components
+```jsx
+// Server Component (padrão)
+export default function ServerComponent() {
+  return <div>Este é um Server Component</div>
+}
+
+// Client Component
+'use client'
+export default function ClientComponent() {
+  return <div>Este é um Client Component</div>
+}
+```
+
+## Estrutura de Projetos
+
+### 1. Organização de Arquivos
+```
+app/
+├── (auth)/           # Grupo de rotas autenticadas
+├── (marketing)/      # Grupo de rotas públicas
+├── api/             # Rotas da API
+├── components/      # Componentes reutilizáveis
+├── lib/            # Utilitários e configurações
+└── styles/         # Arquivos de estilo
+```
+
+### 2. Convenções de Nomenclatura
+- Use `page.tsx` para páginas
+- Use `layout.tsx` para layouts
+- Use `loading.tsx` para estados de carregamento
+- Use `error.tsx` para tratamento de erros
+
+## Performance
+
+### 1. Otimização de Imagens
+```jsx
+import Image from 'next/image'
+
+// ✅ Correto
+<Image
+  src="/imagem.jpg"
+  alt="Descrição"
+  width={500}
+  height={300}
+  priority={true} // Para imagens acima da dobra
+/>
+
+// ❌ Evitar
+<img src="/imagem.jpg" alt="Descrição" />
+```
+
+### 2. Caching e Revalidação
+```jsx
+// Revalidação a cada hora
+export const revalidate = 3600
+
+// Revalidação sob demanda
+export async function revalidatePath(path: string) {
+  revalidatePath(path)
+}
+```
+
+## Segurança
+
+### 1. Proteção de Rotas
+```typescript
+// middleware.ts
+export function middleware(request: NextRequest) {
+  const token = request.cookies.get('token')
+  
+  if (!token && request.nextUrl.pathname.startsWith('/dashboard')) {
+    return NextResponse.redirect(new URL('/login', request.url))
+  }
+}
+```
+
+### 2. Validação de Dados
+- Use Zod para validação de schemas
+- Implemente rate limiting nas APIs
+- Sanitize inputs de usuário
+
+## SEO
+
+### 1. Metadata
+```typescript
+export const metadata = {
+  title: 'Meu Site',
+  description: 'Descrição do meu site',
+  openGraph: {
+    title: 'Meu Site',
+    description: 'Descrição do meu site',
+    images: ['/og-image.jpg'],
+  },
+}
+```
+
+### 2. Sitemap e Robots.txt
+- Use `generateSitemap` para sitemaps dinâmicos
+- Configure `robots.txt` adequadamente
+
+## Dicas e Truques
+
+### 1. Debugging
+- Use `console.log` apenas em Client Components
+- Implemente error boundaries
+- Use React DevTools
+
+### 2. Otimizações
+- Implemente lazy loading para componentes grandes
+- Use Suspense para melhor UX
+- Implemente infinite scroll quando necessário
+
+### 3. Boas Práticas
+- Mantenha componentes pequenos e reutilizáveis
+- Use TypeScript para melhor type safety
+- Implemente testes unitários e de integração
+- Use ESLint e Prettier para consistência de código
+
+## Recursos Adicionais
+- [Documentação Oficial Next.js](https://nextjs.org/docs)
+- [Next.js Blog](https://nextjs.org/blog)
+- [Next.js Examples](https://github.com/vercel/next.js/tree/canary/examples)

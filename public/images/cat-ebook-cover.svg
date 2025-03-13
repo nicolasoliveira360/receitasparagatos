@@ -1,0 +1,81 @@
+<svg width="400" height="600" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo da capa -->
+  <rect width="400" height="600" rx="20" fill="#FEF5E6"/>
+  
+  <!-- Título -->
+  <text x="50" y="80" font-family="Arial" font-weight="bold" font-size="28" fill="#473225">
+    20 RECEITAS CASEIRAS
+  </text>
+  <text x="50" y="120" font-family="Arial" font-weight="bold" font-size="28" fill="#B88917">
+    BALANCEADAS PARA GATOS
+  </text>
+  
+  <!-- Silhueta de gato -->
+  <path d="M200 200 
+           C 180 160, 120 180, 120 220
+           C 120 260, 160 280, 200 280
+           C 240 280, 280 260, 280 220
+           C 280 180, 220 160, 200 200
+           Z" fill="#473225"/>
+  
+  <!-- Orelhas -->
+  <path d="M160 200 L140 160 L180 180 Z" fill="#473225"/>
+  <path d="M240 200 L260 160 L220 180 Z" fill="#473225"/>
+  
+  <!-- Olhos -->
+  <ellipse cx="170" cy="220" rx="10" ry="15" fill="#B88917"/>
+  <ellipse cx="230" cy="220" rx="10" ry="15" fill="#B88917"/>
+  
+  <!-- Pupilas -->
+  <ellipse cx="170" cy="220" rx="5" ry="10" fill="#100b09"/>
+  <ellipse cx="230" cy="220" rx="5" ry="10" fill="#100b09"/>
+  
+  <!-- Nariz -->
+  <path d="M200 240 L190 250 L210 250 Z" fill="#100b09"/>
+  
+  <!-- Bigodes -->
+  <line x1="190" y1="250" x2="150" y2="245" stroke="#100b09" stroke-width="1"/>
+  <line x1="190" y1="250" x2="150" y2="250" stroke="#100b09" stroke-width="1"/>
+  <line x1="190" y1="250" x2="150" y2="255" stroke="#100b09" stroke-width="1"/>
+  
+  <line x1="210" y1="250" x2="250" y2="245" stroke="#100b09" stroke-width="1"/>
+  <line x1="210" y1="250" x2="250" y2="250" stroke="#100b09" stroke-width="1"/>
+  <line x1="210" y1="250" x2="250" y2="255" stroke="#100b09" stroke-width="1"/>
+  
+  <!-- Ícones de comida -->
+  <circle cx="100" cy="350" r="20" fill="#B88917"/>
+  <text x="90" y="358" font-family="Arial" font-size="20" fill="white">🍗</text>
+  
+  <circle cx="150" cy="350" r="20" fill="#B88917"/>
+  <text x="140" y="358" font-family="Arial" font-size="20" fill="white">🐟</text>
+  
+  <circle cx="200" cy="350" r="20" fill="#B88917"/>
+  <text x="190" y="358" font-family="Arial" font-size="20" fill="white">🥩</text>
+  
+  <circle cx="250" cy="350" r="20" fill="#B88917"/>
+  <text x="240" y="358" font-family="Arial" font-size="20" fill="white">🍣</text>
+  
+  <circle cx="300" cy="350" r="20" fill="#B88917"/>
+  <text x="290" y="358" font-family="Arial" font-size="20" fill="white">🏥</text>
+  
+  <!-- Subtítulo -->
+  <text x="50" y="420" font-family="Arial" font-size="18" fill="#473225">
+    Alimentação Natural Felina
+  </text>
+  
+  <!-- Descrição -->
+  <text x="50" y="450" font-family="Arial" font-size="14" fill="#100b09">
+    Receitas nutricionalmente balanceadas
+  </text>
+  <text x="50" y="470" font-family="Arial" font-size="14" fill="#100b09">
+    para uma alimentação natural e saudável
+  </text>
+  <text x="50" y="490" font-family="Arial" font-size="14" fill="#100b09">
+    dos felinos.
+  </text>
+  
+  <!-- Autor -->
+  <text x="50" y="540" font-family="Arial" font-weight="bold" font-size="16" fill="#B88917">
+    Por: Alimentação Natural Felina
+  </text>
+</svg> 
