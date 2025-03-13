@@ -100,7 +100,7 @@ export default function Pricing() {
               }}
             >
               <div className="absolute top-0 right-0 bg-white text-highlight font-bold px-3 md:px-4 py-1 md:py-1.5 rounded-bl-lg transform translate-y-0 text-xs md:text-sm z-10 shadow-md">
-                50% OFF
+                60% OFF
               </div>
               <h3 
                 className="text-base md:text-lg lg:text-xl font-bold mb-1 md:mb-2"
@@ -119,7 +119,7 @@ export default function Pricing() {
             <div className="p-4 md:p-6">
               <div className="flex items-center justify-center mb-4 md:mb-6">
                 <span className="text-gray-500 line-through text-sm md:text-base mr-2 md:mr-3">R$ 97,00</span>
-                <span className="text-xl md:text-2xl lg:text-3xl font-bold text-highlight bg-highlight/10 px-3 py-1 rounded-md">R$ 47,00</span>
+                <span className="text-xl md:text-2xl lg:text-3xl font-bold text-highlight bg-highlight/10 px-3 py-1 rounded-md">R$ 37,00</span>
                 <span className="text-gray-600 ml-2 md:ml-3 text-xs md:text-sm">à vista</span>
               </div>
               
