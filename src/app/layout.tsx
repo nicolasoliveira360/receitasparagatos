@@ -62,6 +62,21 @@ export default function RootLayout({
           />
         </noscript>
         {/* End Meta Pixel Code */}
+
+        {/* Hotjar Tracking Code for Receitas para Gatos */}
+        <Script id="hotjar-tracking" strategy="afterInteractive">
+          {`
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:5340502,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+          `}
+        </Script>
+        {/* End Hotjar Tracking Code */}
       </head>
       <body
         className={`${poppins.variable} antialiased overflow-x-hidden`}
