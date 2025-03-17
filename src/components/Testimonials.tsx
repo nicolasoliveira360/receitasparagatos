@@ -11,54 +11,44 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      name: "Ana P.",
+      name: "Fernanda",
       location: "São Paulo, SP",
       rating: 5,
-      text: "Meu gato Simba sempre foi exigente com comida e tinha problemas de pele recorrentes. Depois de começar a preparar as receitas deste e-book, a transformação foi incrível! Sua pelagem está brilhante, ele está mais ativo e os problemas de pele desapareceram completamente. Estou economizando com veterinário e vendo meu gato muito mais feliz.",
+      text: "O ebook é super fácil de entender! Meu gato adorou as receitas e em poucos dias já vi diferença no humor e na saúde dele.",
       catName: "Simba",
-      catAge: "4 anos",
-      highlight: "Problemas de pele resolvidos",
-      date: "15/03/2023"
-    },
-    {
-      name: "Carlos M.",
-      location: "Rio de Janeiro, RJ",
-      rating: 5,
-      text: "Minha gata Luna tinha vômitos frequentes com ração industrializada. Estava desesperado procurando soluções quando encontrei este e-book. Comecei a preparar as receitas terapêuticas para problemas digestivos e os vômitos pararam em menos de uma semana! Agora ela come com prazer e está ganhando peso saudável. As instruções são claras e as receitas são simples de preparar.",
-      catName: "Luna",
       catAge: "3 anos",
-      highlight: "Vômitos frequentes eliminados",
-      date: "27/04/2023"
-    },
-    {
-      name: "Mariana S.",
-      location: "Belo Horizonte, MG",
-      rating: 5,
-      text: "Meu Thor estava com sobrepeso e letárgico. O veterinário recomendou uma dieta especial, mas as rações diet eram caríssimas. Com as receitas para controle de peso deste e-book, consegui ajudá-lo a perder 2kg em 3 meses de forma saudável. Ele está muito mais ativo e brincalhão agora! O suporte por email foi fundamental para tirar minhas dúvidas durante a transição alimentar.",
-      catName: "Thor",
-      catAge: "6 anos",
-      highlight: "Perda de 2kg em 3 meses",
+      highlight: "Fácil de entender",
       date: "10/05/2023"
     },
     {
-      name: "Roberto L.",
-      location: "Curitiba, PR",
+      name: "Carlos",
+      location: "Rio de Janeiro, RJ",
       rating: 5,
-      text: "Minha gata idosa Mia estava com problemas renais e o veterinário sugeriu uma alimentação caseira controlada. As receitas terapêuticas para saúde renal deste e-book foram um divisor de águas! Seus exames melhoraram significativamente e ela recuperou a energia. A tabela de substituição de ingredientes é perfeita para adaptar as receitas conforme as preferências dela.",
-      catName: "Mia",
-      catAge: "12 anos",
-      highlight: "Melhora nos exames renais",
-      date: "03/06/2023"
+      text: "Recebi o livro digital na hora. As receitas são práticas e explicam direitinho as quantidades certas.",
+      catName: "Luna",
+      catAge: "4 anos",
+      highlight: "Receitas práticas",
+      date: "15/06/2023"
     },
     {
-      name: "Juliana F.",
-      location: "Brasília, DF",
+      name: "Mariana",
+      location: "Belo Horizonte, MG",
       rating: 5,
-      text: "Tenho três gatos e estava gastando uma fortuna com rações premium. Desde que comecei a preparar as receitas deste e-book, estou economizando quase 40% por mês! Além da economia, meus gatos estão visivelmente mais saudáveis, com pelagem brilhante e mais disposição. O guia de suplementação garantiu que eles recebessem todos os nutrientes necessários.",
-      catName: "Vários gatos",
-      catAge: "2-5 anos",
-      highlight: "Economia de 40% nos gastos mensais",
-      date: "22/07/2023"
+      text: "Meu gato sempre teve problemas digestivos com ração. Depois de uma semana com as receitas do ebook, ele já está muito melhor!",
+      catName: "Thor",
+      catAge: "5 anos",
+      highlight: "Problemas digestivos resolvidos",
+      date: "20/07/2023"
+    },
+    {
+      name: "Roberto",
+      location: "Curitiba, PR",
+      rating: 5,
+      text: "Comprei com receio, mas valeu cada centavo! As receitas são simples e meu gato adora. Recomendo a todos os tutores.",
+      catName: "Max",
+      catAge: "2 anos",
+      highlight: "Valeu cada centavo",
+      date: "05/08/2023"
     }
   ];
 
@@ -119,14 +109,14 @@ export default function Testimonials() {
         <div className={`text-center mb-8 md:mb-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="mb-3 md:mb-4">
             <span className="inline-block px-3 md:px-4 py-1 md:py-1.5 rounded-full bg-highlight/15 text-highlight font-medium text-sm md:text-base">
-              Histórias reais de tutores preocupados
+              Depoimentos Reais
             </span>
           </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 section-title text-gray-800">
-            Veja Como Outros Tutores <span className="highlight">Superaram Seus Medos</span>
+            O Que Nossos <span className="highlight">Clientes</span> Dizem
           </h2>
           <p className="text-sm md:text-base lg:text-lg max-w-3xl mx-auto text-gray-700">
-            Tutores como você que estavam preocupados com a saúde de seus gatos e encontraram a solução para uma alimentação segura e nutritiva.
+            Veja o que outros tutores estão falando sobre nosso livro digital de receitas para gatos.
           </p>
         </div>
 

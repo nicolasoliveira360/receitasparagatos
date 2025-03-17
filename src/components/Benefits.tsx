@@ -62,10 +62,11 @@ export default function Benefits() {
   ];
 
   const solutions = [
-    "Receitas cientificamente balanceadas para acabar com suas dúvidas",
-    "Guia completo de suplementação para garantir todos os nutrientes",
-    "Instruções detalhadas para evitar erros na preparação",
-    "Opções específicas para gatos com problemas de saúde já existentes"
+    "Seu gato mais saudável e feliz",
+    "Alimentação natural e equilibrada",
+    "Livre de rações industrializadas",
+    "Receitas simples, prontas em minutos",
+    "Economia garantida: sem precisar gastar com rações caras ou idas frequentes ao veterinário"
   ];
 
   return (
@@ -74,14 +75,14 @@ export default function Benefits() {
         <div className={`text-center mb-8 md:mb-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="mb-3 md:mb-4">
             <span className="inline-block px-3 md:px-4 py-1 md:py-1.5 rounded-full bg-highlight/15 text-highlight font-medium text-sm md:text-base">
-              O que está em jogo é a saúde do seu gato
+              Por que mudar para uma alimentação natural?
             </span>
           </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 section-title text-gray-800">
-            Problemas que a <span className="highlight">Alimentação Inadequada</span> Pode Causar
+            Benefícios <span className="highlight">Imediatos</span> para seu Gato
           </h2>
           <p className="text-sm md:text-base lg:text-lg max-w-3xl mx-auto text-gray-700">
-            Muitos tutores não percebem os riscos escondidos na alimentação industrializada até que seja tarde demais. Conheça os perigos que podem estar afetando seu gato agora mesmo.
+            Agora você pode mudar isso com um clique! Receba nosso <strong>Livro Digital com 20 Receitas Caseiras Balanceadas para Gatos</strong> e aprenda como preparar refeições naturais, saudáveis e seguras no conforto da sua casa.
           </p>
         </div>
 
@@ -109,16 +110,16 @@ export default function Benefits() {
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
             <div className="md:w-1/4 flex justify-center mb-4 md:mb-0">
               <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-highlight/15 flex items-center justify-center text-2xl md:text-3xl">
-                💡
+                📘
               </div>
             </div>
             <div className="md:w-3/4">
-              <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-gray-800 text-center md:text-left">A solução que você procurava:</h3>
+              <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-gray-800 text-center md:text-left">O que você vai receber:</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                 {solutions.map((solution, index) => (
                   <div key={index} className="flex items-center gap-2 md:gap-3">
                     <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-highlight/15 flex items-center justify-center flex-shrink-0">
-                      <span className="text-highlight text-xs md:text-sm font-bold">✓</span>
+                      <span className="text-highlight text-xs md:text-sm font-bold">✅</span>
                     </div>
                     <span className="text-xs md:text-sm text-gray-700">{solution}</span>
                   </div>
@@ -131,7 +132,7 @@ export default function Benefits() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  QUERO PROTEGER MEU GATO AGORA
+                  QUERO RECEBER O MEU EBOOK AGORA
                 </a>
               </div>
             </div>

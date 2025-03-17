@@ -65,12 +65,12 @@ export default function Pricing() {
   }, []);
 
   const features = [
-    "20 receitas cientificamente balanceadas para evitar deficiências nutricionais",
-    "Guia de suplementação completo para garantir a saúde do seu gato",
-    "Tabela de substituição para adaptar às preferências do seu gato exigente",
-    "Receitas terapêuticas para problemas renais, digestivos e obesidade",
-    "Plano de transição segura para evitar rejeição alimentar",
-    "Guia de Transição Alimentar para evitar rejeição"
+    "Ebook digital enviado diretamente para seu e-mail",
+    "Receitas desenvolvidas com orientação de especialistas",
+    "Ingredientes simples encontrados no mercado",
+    "Passo a passo fácil, até para quem nunca cozinhou",
+    "Acesse do celular, tablet ou computador",
+    "Envio imediato após a compra!"
   ];
 
   return (
@@ -79,14 +79,14 @@ export default function Pricing() {
         <div className={`text-center mb-8 md:mb-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="mb-3 md:mb-4">
             <span className="inline-block px-3 md:px-4 py-1 md:py-1.5 rounded-full bg-highlight/15 text-highlight font-medium text-sm md:text-base">
-              A decisão que pode mudar a vida do seu gato
+              Oferta Especial por Tempo Limitado
             </span>
           </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 section-title text-gray-900">
-            Quanto <span className="text-highlight">Vale a Tranquilidade</span> de Saber que Está Fazendo o Melhor?
+            O <span className="text-highlight">Livro Digital</span> Completo com 20 Receitas
           </h2>
           <p className="text-sm md:text-base lg:text-lg max-w-3xl mx-auto text-gray-700">
-            Pense em quanto você já gastou com rações caras que prometiam qualidade, mas não resolveram os problemas do seu gato. Ou pior, quanto custaria um tratamento veterinário para doenças causadas por má alimentação.
+            Poderia custar R$297, mas estamos oferecendo por apenas R$37 para ajudar mais tutores conscientes!
           </p>
         </div>
 
@@ -100,33 +100,33 @@ export default function Pricing() {
               }}
             >
               <div className="absolute top-0 right-0 bg-white text-highlight font-bold px-3 md:px-4 py-1 md:py-1.5 rounded-bl-lg transform translate-y-0 text-xs md:text-sm z-10 shadow-md">
-                60% OFF
+                87% OFF
               </div>
               <h3 
                 className="text-base md:text-lg lg:text-xl font-bold mb-1 md:mb-2"
                 style={{color: '#ffffff'}}
               >
-                A Solução para Suas Preocupações com a Alimentação do Seu Gato
+                O Livro Digital (Ebook) Completo com 20 Receitas Caseiras Balanceadas para Gatos!
               </h3>
               <p 
                 className="text-xs md:text-sm"
                 style={{color: '#ffffff'}}
               >
-                Acabe com o medo de estar oferecendo uma alimentação inadequada ao seu felino
+                Transforme a saúde do seu gato em 7 dias com nosso livro digital de receitas saudáveis!
               </p>
             </div>
             
             <div className="p-4 md:p-6">
               <div className="flex items-center justify-center mb-4 md:mb-6">
-                <span className="text-gray-500 line-through text-sm md:text-base mr-2 md:mr-3">R$ 97,00</span>
+                <span className="text-gray-500 line-through text-sm md:text-base mr-2 md:mr-3">R$ 297,00</span>
                 <span className="text-xl md:text-2xl lg:text-3xl font-bold text-highlight bg-highlight/10 px-3 py-1 rounded-md">R$ 37,00</span>
-                <span className="text-gray-600 ml-2 md:ml-3 text-xs md:text-sm">à vista</span>
+                <span className="text-gray-600 ml-2 md:ml-3 text-xs md:text-sm">pagamento único</span>
               </div>
               
               <div className="mb-6 md:mb-8">
                 <div className="bg-highlight/10 p-3 md:p-4 rounded-lg border border-highlight/20 mb-4 md:mb-6 shadow-sm">
                   <div className="text-center mb-1 md:mb-2">
-                    <p className="font-medium text-gray-900 text-xs md:text-sm">Não espere seu gato adoecer para agir!</p>
+                    <p className="font-medium text-gray-900 text-xs md:text-sm">Oferta por tempo limitado! Termina em:</p>
                   </div>
                   <div className="flex justify-center gap-2 md:gap-3">
                     <div className="bg-white px-2 md:px-3 py-1 md:py-2 rounded-lg text-center min-w-[50px] md:min-w-[60px] shadow-sm border border-highlight/10">
@@ -155,7 +155,7 @@ export default function Pricing() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <span>QUERO PROTEGER MEU GATO</span>
+                    <span>QUERO RECEBER O MEU EBOOK AGORA POR APENAS R$37!</span>
                   </Link>
                   
                   <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-xs text-gray-700 mt-3 md:mt-4">
@@ -169,7 +169,7 @@ export default function Pricing() {
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5 text-green-500 mr-1 md:mr-1.5" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
-                      <span>Garantia de 30 dias</span>
+                      <span>Garantia total de 7 dias</span>
                     </div>
                   </div>
                 </div>
@@ -191,7 +191,7 @@ export default function Pricing() {
                 </div>
                 
                 <p className="mt-6 md:mt-8 text-xs md:text-sm text-gray-800 text-center">
-                  <span className="font-semibold text-highlight">Lembre-se:</span> Cada dia que passa com alimentação inadequada pode estar prejudicando a saúde do seu gato.
+                  <span className="font-semibold text-highlight">Garantia incondicional:</span> Não gostou do livro digital? Devolvemos 100% do seu dinheiro, sem perguntas.
                 </p>
               </div>
             </div>

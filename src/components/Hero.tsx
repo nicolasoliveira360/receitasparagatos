@@ -18,32 +18,29 @@ export default function Hero() {
           <div>
             <div className="mb-3 md:mb-4">
               <span className="inline-block px-3 md:px-4 py-1 md:py-1.5 rounded-full bg-highlight/15 text-highlight font-medium text-sm md:text-base">
-                Você sabe o que realmente está na ração do seu gato?
+                Transforme a Saúde do Seu Gato em 7 Dias
               </span>
             </div>
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-gray-800">
-              <span className="highlight">Pare de se preocupar</span> com a saúde do seu gato
+              <span className="highlight">Livro Digital</span> de Receitas Saudáveis para Gatos
             </h1>
           </div>
           
           <p className="text-sm md:text-base lg:text-lg text-gray-700">
-            Você já se sentiu <strong>culpado</strong> por não saber se está oferecendo a melhor alimentação para seu felino? Ou tem <strong>medo</strong> que ele desenvolva problemas de saúde por causa da ração industrializada?
+            📘 Receba <strong>HOJE MESMO</strong> o ebook completo com receitas fáceis, seguras e aprovadas para deixar seu gato mais feliz, saudável e livre de rações industrializadas.
           </p>
           
           <div className="flex flex-wrap gap-2 md:gap-3 mt-1 md:mt-2">
             <div className="flex items-center gap-2 bg-white/90 p-2 md:p-3 rounded-lg border border-highlight/15 shadow-sm">
-              <span className="text-xs md:text-sm text-gray-700 font-medium">❌ Rações com ingredientes duvidosos</span>
+              <span className="text-xs md:text-sm text-gray-700 font-medium">❌ Seu gato vive vomitando ou com intestino preso?</span>
             </div>
             <div className="flex items-center gap-2 bg-white/90 p-2 md:p-3 rounded-lg border border-highlight/15 shadow-sm">
-              <span className="text-xs md:text-sm text-gray-700 font-medium">❌ Problemas digestivos e alergias</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/90 p-2 md:p-3 rounded-lg border border-highlight/15 shadow-sm">
-              <span className="text-xs md:text-sm text-gray-700 font-medium">❌ Obesidade e diabetes felina</span>
+              <span className="text-xs md:text-sm text-gray-700 font-medium">❌ Cansado de gastar com rações caras e remédios?</span>
             </div>
           </div>
           
           <p className="text-sm md:text-base text-gray-700 font-medium">
-            Apresentamos a solução: <span className="text-highlight">20 Receitas Caseiras Balanceadas para Gatos</span> - um guia completo para alimentação natural que vai acabar com suas preocupações.
+            <span className="text-highlight font-bold">A verdade é:</span> Muitas rações industrializadas possuem ingredientes que prejudicam a saúde e o bem-estar do seu gato.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mt-3 md:mt-4">
@@ -53,13 +50,13 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              QUERO ACABAR COM ESSA PREOCUPAÇÃO
+              QUERO GARANTIR MEU LIVRO DIGITAL AGORA!
             </Link>
           </div>
           
           <div className="flex items-center gap-3 mt-3 p-3 md:p-4 bg-white/90 rounded-lg border border-highlight/15 shadow-sm">
             <p className="text-xs md:text-sm text-gray-700">
-              <span className="font-bold text-highlight">+500 tutores</span> já deixaram de se preocupar com a alimentação de seus gatos
+              <span className="font-bold text-highlight">🔒 Garantia total:</span> ou seu dinheiro de volta!
             </p>
           </div>
         </div>
@@ -75,8 +72,8 @@ export default function Hero() {
               </span>
             </div>
             <Image
-              src="/images/cat-ebook-cover.jpg"
-              alt="Capa do e-book 20 Receitas Caseiras Balanceadas para Gatos"
+              src="/images/mockup livro.png"
+              alt="Mockup do e-book 20 Receitas Caseiras Balanceadas para Gatos"
               fill
               className="object-cover z-0 rounded-image"
               priority

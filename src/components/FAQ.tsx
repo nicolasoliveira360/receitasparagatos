@@ -35,54 +35,54 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "As rações industrializadas realmente podem prejudicar meu gato?",
-      answer: "Infelizmente, sim. Muitas rações comerciais contêm subprodutos de baixa qualidade, conservantes artificiais e excesso de carboidratos que os gatos, como carnívoros obrigatórios, não estão adaptados a processar. Estudos mostram uma correlação entre alimentação industrializada de baixa qualidade e o aumento de problemas como diabetes, obesidade, doenças renais e alergias em gatos. Nossas receitas eliminam esses riscos ao usar apenas ingredientes naturais e balanceados.",
-      category: "Riscos"
+      question: "O que exatamente estou comprando?",
+      answer: "Você está comprando um livro digital (ebook) com 20 receitas caseiras balanceadas e saudáveis para gatos. Após o pagamento, ele será enviado para seu e-mail.",
+      category: "Produto"
     },
     {
-      question: "Tenho medo de fazer algo errado e prejudicar meu gato. Como evitar isso?",
-      answer: "Essa é uma preocupação muito comum e totalmente compreensível. É por isso que desenvolvemos receitas cientificamente balanceadas e testadas, com instruções detalhadas passo a passo. Cada receita inclui a quantidade exata de nutrientes necessários, e nosso guia de suplementação garante que seu gato receba tudo o que precisa. Além disso, incluímos sinais de alerta para observar e quando consultar um veterinário. Você não estará sozinho nessa jornada.",
+      question: "É seguro para o meu gato?",
+      answer: "Sim! Todas as receitas foram elaboradas com orientação de especialistas, com ingredientes adequados para a saúde felina.",
       category: "Segurança"
     },
     {
-      question: "Meu gato já tem problemas de saúde. A alimentação natural pode ajudar?",
-      answer: "Muitos problemas de saúde em gatos têm relação direta com a alimentação. Nosso e-book inclui receitas terapêuticas específicas para condições como problemas renais, digestivos, obesidade e alergias alimentares. Tutores relatam melhoras significativas após a transição para alimentação natural adequada. No entanto, sempre recomendamos consultar seu veterinário antes de fazer mudanças na dieta de um gato com condições médicas, e nosso guia inclui informações para compartilhar com seu veterinário.",
-      category: "Saúde"
+      question: "Recebo quando?",
+      answer: "Imediatamente após a compra! O ebook será enviado diretamente para seu e-mail.",
+      category: "Entrega"
     },
     {
-      question: "Preparar comida caseira não é muito caro e trabalhoso?",
-      answer: "Este é um dos maiores mitos sobre alimentação natural. Quando você compara o custo de rações premium de qualidade com nossas receitas, frequentemente a alimentação caseira acaba sendo mais econômica. Além disso, nossas receitas foram desenvolvidas pensando na praticidade: a maioria pode ser preparada em 30-45 minutos, e podem ser feitas em lotes e congeladas para uso posterior. Incluímos estratégias de economia e dicas de preparação rápida que se adaptam até às rotinas mais ocupadas.",
-      category: "Custo e Tempo"
+      question: "Preciso ter experiência na cozinha?",
+      answer: "Não! As receitas são fáceis, rápidas e com ingredientes simples.",
+      category: "Preparo"
     },
     {
-      question: "Como sei se estou oferecendo todos os nutrientes necessários?",
-      answer: "Esta é uma preocupação válida que abordamos detalhadamente no e-book. Cada receita foi formulada para fornecer a proporção correta de proteínas, gorduras e nutrientes essenciais. Além disso, incluímos um guia completo de suplementação que explica exatamente quais suplementos usar, em que quantidade e onde encontrá-los. Eliminamos todas as dúvidas para que você tenha certeza de que seu gato está recebendo uma nutrição completa e balanceada.",
+      question: "Como sei se as receitas são balanceadas?",
+      answer: "Todas as receitas foram desenvolvidas com orientação de especialistas em nutrição felina, garantindo o equilíbrio nutricional que seu gato precisa como carnívoro obrigatório.",
       category: "Nutrição"
     },
     {
-      question: "E se meu veterinário for contra a alimentação natural?",
-      answer: "Muitos veterinários não recebem treinamento extensivo em nutrição felina e podem ter reservas iniciais. Por isso, incluímos uma seção especial com informações baseadas em evidências científicas que você pode compartilhar com seu veterinário. Também listamos estudos recentes sobre os benefícios da alimentação natural adequadamente balanceada. Cada vez mais veterinários estão reconhecendo os benefícios de dietas naturais bem formuladas, e nosso guia ajuda a facilitar essa conversa.",
-      category: "Veterinários"
+      question: "Posso imprimir o ebook?",
+      answer: "Sim! O ebook é fornecido em formato PDF, que você pode imprimir facilmente se preferir ter uma cópia física para consulta na cozinha.",
+      category: "Formato"
     },
     {
-      question: "Meu gato é muito exigente. E se ele rejeitar a comida caseira?",
-      answer: "Gatos podem ser notoriamente seletivos, e entendemos essa preocupação. Por isso, desenvolvemos um protocolo especial de transição para gatos exigentes, com técnicas que aumentam significativamente a taxa de aceitação. O e-book inclui variações de textura, temperatura e apresentação, além de 'truques' comprovados para gatos resistentes a mudanças. Com 20 receitas diferentes, há opções suficientes para encontrar algo que seu gato adore, mesmo os mais exigentes.",
-      category: "Aceitação"
+      question: "E se meu gato não gostar das receitas?",
+      answer: "O ebook inclui dicas para introduzir gradualmente a alimentação natural e adaptar as receitas às preferências do seu gato. Além disso, oferecemos garantia de 7 dias - se seu gato não se adaptar, devolvemos seu dinheiro.",
+      category: "Adaptação"
     },
     {
-      question: "Não tenho tempo para cozinhar todos os dias. Como lidar com isso?",
-      answer: "Desenvolvemos nossas receitas pensando em tutores ocupados. A maioria das receitas pode ser preparada em grandes lotes (uma vez por semana ou até quinzenalmente) e congelada em porções diárias. O e-book inclui um plano detalhado de preparação e armazenamento, com dicas para otimizar seu tempo na cozinha. Muitos tutores relatam que gastam apenas 1-2 horas por semana na preparação, menos tempo do que levariam para ir à loja de pets comprar ração várias vezes.",
-      category: "Praticidade"
+      question: "Quanto tempo leva para preparar as receitas?",
+      answer: "A maioria das receitas pode ser preparada em 20-30 minutos. Além disso, você pode preparar em lotes e congelar porções para a semana, economizando ainda mais tempo.",
+      category: "Tempo"
     },
     {
-      question: "E se eu comprar e não conseguir implementar as receitas?",
-      answer: "Entendemos que pode haver apreensão em fazer uma mudança na alimentação do seu gato. Por isso, oferecemos garantia de satisfação de 30 dias. Se você não conseguir implementar as receitas ou não ficar satisfeito com o e-book por qualquer motivo, basta enviar um e-mail para nosso suporte e processaremos o reembolso integral, sem questionamentos. Queremos que você tenha total confiança na sua decisão.",
+      question: "Onde encontro os ingredientes?",
+      answer: "Todos os ingredientes são comuns e podem ser encontrados em supermercados, açougues e feiras. O ebook também inclui sugestões de substituições caso algum ingrediente não esteja disponível.",
+      category: "Ingredientes"
+    },
+    {
+      question: "A garantia é realmente sem perguntas?",
+      answer: "Sim! Se você não ficar satisfeito com o ebook por qualquer motivo dentro do período de 7 dias, basta enviar um e-mail solicitando o reembolso e devolveremos 100% do seu dinheiro, sem questionamentos.",
       category: "Garantia"
-    },
-    {
-      question: "Vou ficar sozinho nessa jornada ou terei algum suporte?",
-      answer: "Você definitivamente não estará sozinho! Além do e-book detalhado, oferecemos suporte por e-mail por 30 dias após a compra. Nossa equipe está disponível para responder perguntas sobre as receitas, substituições de ingredientes, ou qualquer outra dúvida. Também incluímos acesso a recursos adicionais e atualizações gratuitas do e-book por um ano. Estamos comprometidos em ajudar você a ter sucesso nessa transição importante.",
-      category: "Suporte"
     }
   ];
 
@@ -92,14 +92,14 @@ export default function FAQ() {
         <div className={`text-center mb-8 md:mb-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="mb-3 md:mb-4">
             <span className="inline-block px-3 md:px-4 py-1 md:py-1.5 rounded-full bg-highlight/15 text-highlight font-medium text-sm md:text-base">
-              Dúvidas que tiram seu sono
+              Tire suas dúvidas
             </span>
           </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 section-title text-gray-800">
-            Respondendo Suas <span className="highlight">Preocupações</span>
+            Perguntas <span className="highlight">Frequentes</span>
           </h2>
           <p className="text-sm md:text-base lg:text-lg max-w-3xl mx-auto text-gray-700">
-            Sabemos que você tem medos e dúvidas sobre a alimentação do seu gato. Aqui estão as respostas que vão te ajudar a tomar a melhor decisão para o bem-estar do seu felino.
+            Aqui estão as respostas para as perguntas mais comuns sobre o nosso livro digital de receitas para gatos.
           </p>
         </div>
 
@@ -154,7 +154,7 @@ export default function FAQ() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              QUERO ACABAR COM MINHAS PREOCUPAÇÕES
+              QUERO RECEBER O MEU EBOOK AGORA POR APENAS R$37!
             </a>
             <p className="mt-3 md:mt-4 text-xs md:text-sm text-gray-700">
               Ainda tem dúvidas? Entre em contato: <a href="mailto:suporte@receitasparagatos.com.br" className="text-highlight font-medium hover:underline">suporte@receitasparagatos.com.br</a>
