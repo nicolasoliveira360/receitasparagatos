@@ -150,7 +150,7 @@ export default function Pricing() {
                 
                 <div className="text-center mb-6 md:mb-8">
                   <Link 
-                    href="https://pay.hotmart.com/B98656274B?off=alr1fi43" 
+                    href="https://pay.hotmart.com/B98656274B" 
                     className="inline-block bg-highlight text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-lg text-sm md:text-base hover:bg-highlight/90 transition-all duration-300 shadow-md hover:shadow-lg w-full max-w-md mx-auto flex items-center justify-center gap-1 md:gap-2 hover:scale-[1.02]"
                     target="_blank"
                     rel="noopener noreferrer"

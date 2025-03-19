@@ -139,7 +139,7 @@ export default function Categories() {
                 
                 <div className="text-center mt-4 md:mt-5">
                   <a 
-                    href="https://pay.hotmart.com/B98656274B?off=alr1fi43" 
+                    href="https://pay.hotmart.com/B98656274B" 
                     className="inline-block bg-highlight text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-lg text-sm md:text-base hover:bg-highlight/90 transition-colors shadow-md hover:shadow-lg"
                     target="_blank"
                     rel="noopener noreferrer"
