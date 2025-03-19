@@ -45,7 +45,7 @@ export default function Hero() {
           
           <div className="flex flex-col sm:flex-row gap-4 mt-3 md:mt-4">
             <Link 
-              href="https://hotm.art/HnrB3p8" 
+              href="https://pay.hotmart.com/B98656274B?off=alr1fi43" 
               className="btn-primary text-center font-bold text-sm md:text-base py-3 md:py-4 px-6 md:px-8 shadow-md hover:shadow-lg transition-all"
               target="_blank"
               rel="noopener noreferrer"
