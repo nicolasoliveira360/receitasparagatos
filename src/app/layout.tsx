@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import Script from "next/script";
+import Image from "next/image";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -53,12 +54,12 @@ export default function RootLayout({
           `}
         </Script>
         <noscript>
-          <img 
-            height="1" 
-            width="1" 
+          <Image 
+            height={1} 
+            width={1} 
+            alt="facebook pixel"
             style={{ display: 'none' }}
             src="https://www.facebook.com/tr?id=668159282337201&ev=PageView&noscript=1"
-            alt="facebook pixel"
           />
         </noscript>
         {/* End Meta Pixel Code */}

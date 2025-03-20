@@ -152,25 +152,6 @@ export default function Pricing() {
                   <Link 
                     href="https://hotm.art/HnrB3p8"
                     className="inline-block bg-highlight text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-lg text-sm md:text-base hover:bg-highlight/90 transition-all duration-300 shadow-md hover:shadow-lg w-full max-w-md mx-auto flex items-center justify-center gap-1 md:gap-2 hover:scale-[1.02]"
-                    onClick={() => {
-                      if (typeof window !== 'undefined') {
-                        // Google Ads conversion tracking
-                        try {
-                          // @ts-ignore
-                          gtag('event', 'conversion', {'send_to': 'AW-16840469676/Dn-YCJT-_ZQZEJfHrqQ9'});
-                        } catch (e) {
-                          console.error('Google Ads conversion failed', e);
-                        }
-                        
-                        // Facebook Pixel conversion tracking
-                        try {
-                          // @ts-ignore
-                          fbq('track', 'InitiateCheckout');
-                        } catch (e) {
-                          console.error('Facebook Pixel conversion failed', e);
-                        }
-                      }
-                    }}
                   >
                     <span>QUERO RECEBER O MEU EBOOK AGORA POR APENAS R$10!</span>
                   </Link>

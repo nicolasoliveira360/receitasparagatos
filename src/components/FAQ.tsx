@@ -151,25 +151,6 @@ export default function FAQ() {
             <a
               href="https://hotm.art/HnrB3p8"
               className="inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-6 rounded-full transition-all duration-300 text-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-sm md:text-base"
-              onClick={() => {
-                if (typeof window !== 'undefined') {
-                  // Google Ads conversion tracking
-                  try {
-                    // @ts-ignore
-                    gtag('event', 'conversion', {'send_to': 'AW-16840469676/Dn-YCJT-_ZQZEJfHrqQ9'});
-                  } catch (e) {
-                    console.error('Google Ads conversion failed', e);
-                  }
-                  
-                  // Facebook Pixel conversion tracking
-                  try {
-                    // @ts-ignore
-                    fbq('track', 'InitiateCheckout');
-                  } catch (e) {
-                    console.error('Facebook Pixel conversion failed', e);
-                  }
-                }
-              }}
             >
               QUERO RECEBER O MEU EBOOK AGORA POR APENAS R$10!
             </a>

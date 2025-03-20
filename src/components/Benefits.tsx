@@ -126,11 +126,9 @@ export default function Benefits() {
                 ))}
               </div>
               <div className="mt-5 md:mt-6 text-center">
-                <a 
-                  href="https://pay.hotmart.com/B98656274B" 
-                  className="inline-block bg-highlight text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-lg text-sm md:text-base hover:bg-highlight/90 transition-colors shadow-md hover:shadow-lg"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <a
+                 href="https://hotm.art/HnrB3p8" 
+                 className="inline-block bg-highlight text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-lg text-sm md:text-base hover:bg-highlight/90 transition-colors shadow-md hover:shadow-lg"
                 >
                   QUERO RECEBER O MEU EBOOK AGORA
                 </a>
