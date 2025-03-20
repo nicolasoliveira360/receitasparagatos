@@ -86,7 +86,7 @@ export default function Pricing() {
             O <span className="text-highlight">Livro Digital</span> Completo com 20 Receitas
           </h2>
           <p className="text-sm md:text-base lg:text-lg max-w-3xl mx-auto text-gray-700">
-            Poderia custar R$297, mas estamos oferecendo por apenas R$37 para ajudar mais tutores conscientes!
+            Poderia custar R$297, mas estamos oferecendo por apenas R$10 para ajudar mais tutores conscientes!
           </p>
         </div>
 
@@ -119,7 +119,7 @@ export default function Pricing() {
             <div className="p-4 md:p-6">
               <div className="flex items-center justify-center mb-4 md:mb-6">
                 <span className="text-gray-500 line-through text-sm md:text-base mr-2 md:mr-3">R$ 297,00</span>
-                <span className="text-xl md:text-2xl lg:text-3xl font-bold text-highlight bg-highlight/10 px-3 py-1 rounded-md">R$ 37,00</span>
+                <span className="text-xl md:text-2xl lg:text-3xl font-bold text-highlight bg-highlight/10 px-3 py-1 rounded-md">R$ 10,00</span>
                 <span className="text-gray-600 ml-2 md:ml-3 text-xs md:text-sm">pagamento único</span>
               </div>
               
@@ -150,12 +150,29 @@ export default function Pricing() {
                 
                 <div className="text-center mb-6 md:mb-8">
                   <Link 
-                    href="https://pay.hotmart.com/B98656274B" 
+                    href="https://hotm.art/HnrB3p8"
                     className="inline-block bg-highlight text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-lg text-sm md:text-base hover:bg-highlight/90 transition-all duration-300 shadow-md hover:shadow-lg w-full max-w-md mx-auto flex items-center justify-center gap-1 md:gap-2 hover:scale-[1.02]"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    onClick={() => {
+                      if (typeof window !== 'undefined') {
+                        // Google Ads conversion tracking
+                        try {
+                          // @ts-ignore
+                          gtag('event', 'conversion', {'send_to': 'AW-16840469676/Dn-YCJT-_ZQZEJfHrqQ9'});
+                        } catch (e) {
+                          console.error('Google Ads conversion failed', e);
+                        }
+                        
+                        // Facebook Pixel conversion tracking
+                        try {
+                          // @ts-ignore
+                          fbq('track', 'InitiateCheckout');
+                        } catch (e) {
+                          console.error('Facebook Pixel conversion failed', e);
+                        }
+                      }
+                    }}
                   >
-                    <span>QUERO RECEBER O MEU EBOOK AGORA POR APENAS R$37!</span>
+                    <span>QUERO RECEBER O MEU EBOOK AGORA POR APENAS R$10!</span>
                   </Link>
                   
                   <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-xs text-gray-700 mt-3 md:mt-4">

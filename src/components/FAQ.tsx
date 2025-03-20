@@ -148,13 +148,30 @@ export default function FAQ() {
           </div>
           
           <div className="mt-8 md:mt-10 text-center">
-            <a 
-              href="https://pay.hotmart.com/B98656274B" 
-              className="inline-block bg-highlight text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-lg text-sm md:text-base hover:bg-highlight/90 transition-colors shadow-md hover:shadow-lg"
-              target="_blank"
-              rel="noopener noreferrer"
+            <a
+              href="https://hotm.art/HnrB3p8"
+              className="inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-6 rounded-full transition-all duration-300 text-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-sm md:text-base"
+              onClick={() => {
+                if (typeof window !== 'undefined') {
+                  // Google Ads conversion tracking
+                  try {
+                    // @ts-ignore
+                    gtag('event', 'conversion', {'send_to': 'AW-16840469676/Dn-YCJT-_ZQZEJfHrqQ9'});
+                  } catch (e) {
+                    console.error('Google Ads conversion failed', e);
+                  }
+                  
+                  // Facebook Pixel conversion tracking
+                  try {
+                    // @ts-ignore
+                    fbq('track', 'InitiateCheckout');
+                  } catch (e) {
+                    console.error('Facebook Pixel conversion failed', e);
+                  }
+                }
+              }}
             >
-              QUERO RECEBER O MEU EBOOK AGORA POR APENAS R$37!
+              QUERO RECEBER O MEU EBOOK AGORA POR APENAS R$10!
             </a>
             <p className="mt-3 md:mt-4 text-xs md:text-sm text-gray-700">
               Ainda tem dúvidas? Entre em contato: <a href="mailto:suporte@receitasparagatos.com.br" className="text-highlight font-medium hover:underline">suporte@receitasparagatos.com.br</a>
